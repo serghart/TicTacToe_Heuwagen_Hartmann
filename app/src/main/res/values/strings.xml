@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">TicTacToe_Heuwagen_Hartmann</string>
+
+    <string name="HomeMenue">Tic Tac Toe</string>
+    <string name="SpielenButton">Spielen</string>
+
+    <string name="PlayerSetupTitle">Gib deinen Namen ein</string>
+    <string name="Label1">Spieler 1</string>
+    <string name="Label2">Spieler 2</string>
+    <string name="ausfuehrenButton">Namen speichern</string>
+    <string name="NameHint">Gib deinen Namen ein</string>
+
+    <string name="nochmalSpielen">Nochmal spielen</string>
+    <string name="homeButton">Home</string>
+</resources>
