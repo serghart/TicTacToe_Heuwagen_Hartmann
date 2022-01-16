@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TicTacToeFeld">
+        <attr name="feldFarbe" format="color"/>
+        <attr name="XFarbe" format="color"/>
+        <attr name="OFarbe" format="color"/>
+        <attr name="gewinnLinie" format="color"/>
+    </declare-styleable>
+</resources>
