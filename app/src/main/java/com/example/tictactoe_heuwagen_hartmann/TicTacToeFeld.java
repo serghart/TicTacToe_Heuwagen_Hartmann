@@ -32,7 +32,7 @@ public class TicTacToeFeld extends View {
     public TicTacToeFeld(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
 
-        game = new SpielLogik();
+        game = new SpielLogik(context);
 
         TypedArray a = context.getTheme().obtainStyledAttributes(attrs,
                 R.styleable.TicTacToeFeld, 0, 0);

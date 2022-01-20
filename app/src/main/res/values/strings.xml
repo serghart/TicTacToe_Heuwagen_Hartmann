@@ -3,6 +3,7 @@
 
     <string name="HomeMenue">Tic Tac Toe</string>
     <string name="SpielenButton">Spielen</string>
+    <string name="StatisticsButton">Statistik</string>
 
     <string name="PlayerSetupTitle">Gib deinen Namen ein</string>
     <string name="Label1">Spieler 1</string>
