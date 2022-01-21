@@ -96,6 +96,7 @@ class SpielLogik {
             nochmalSpielenButton.setVisibility(View.VISIBLE);
             homeButton.setVisibility(View.VISIBLE);
             spielerZug.setText((spielerNamen[spieler - 1] + " hat gewonnen!"));
+
             /* entry db */
             dbHandler.addWinner(spielerNamen[spieler - 1]);
             return true;

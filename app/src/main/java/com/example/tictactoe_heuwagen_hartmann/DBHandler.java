@@ -38,39 +38,55 @@ public class DBHandler extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public void addWinner(String name){
+    /**
+     * <summary>Schreibt den Namen des Gewinners in die DB</summary>
+     *
+     * @param name Name des Gewinners
+     */
+    public void addWinner(String name) {
+        /* get db */
         SQLiteDatabase db = this.getWritableDatabase();
-
+        /* init new values object for easier query */
         ContentValues values = new ContentValues();
-
+        /* set values for the data */
         values.put(WINNER_NAME, name);
-
+        /* execute db query that inserts the player data */
         db.insert(TABLE_NAME, null, values);
-
+        /* close db to prevent unwanted db queries */
         db.close();
     }
 
-    public ArrayList<SpielerStatistik> getWinners(){
+    /**
+     * <summary>Gibt ein Array mit den {@link SpielerStatistik} zurück (Spielername, Anzahl gewonnene Spiele)</summary>
+     */
+    public ArrayList<SpielerStatistik> getWinners() {
+        /* get db */
         SQLiteDatabase db = this.getWritableDatabase();
-
-        Cursor cursor = db.rawQuery("SELECT winner, count(winner) FROM " + TABLE_NAME + " GROUP by winner",null);
-
+        /* init cursor that can iterate over the query result */
+        Cursor cursor = db.rawQuery("SELECT winner, count(winner) FROM " + TABLE_NAME + " GROUP by winner", null);
+        /* init result list */
         ArrayList<SpielerStatistik> list = new ArrayList<>();
-
-        if(cursor.moveToFirst()){
+        /* iterate over the results and fill the result array */
+        if (cursor.moveToFirst()) {
             do {
                 list.add(new SpielerStatistik(cursor.getString(0), cursor.getInt(1)));
             } while (cursor.moveToNext());
         }
-
+        /* close db connection */
         cursor.close();
-
+        /* return the result list */
         return list;
     }
 
-    public void wipeWinners(){
+    /**
+     * <summary>Helper function to delete all userdata from the statistics table</summary>
+     */
+    public void wipeWinners() {
+
         SQLiteDatabase db = this.getWritableDatabase();
 
-        db.delete(TABLE_NAME, "",null);
+        db.delete(TABLE_NAME, "", null);
+
+        db.close();
     }
 }
