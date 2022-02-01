@@ -44,6 +44,9 @@ public class DBHandler extends SQLiteOpenHelper {
      * @param name Name des Gewinners
      */
     public void addWinner(String name) {
+        if(name.isEmpty()){
+            return;
+        }
         /* get db */
         SQLiteDatabase db = this.getWritableDatabase();
         /* init new values object for easier query */
@@ -63,7 +66,7 @@ public class DBHandler extends SQLiteOpenHelper {
         /* get db */
         SQLiteDatabase db = this.getWritableDatabase();
         /* init cursor that can iterate over the query result */
-        Cursor cursor = db.rawQuery("SELECT winner, count(winner) FROM " + TABLE_NAME + " GROUP by winner", null);
+        Cursor cursor = db.rawQuery("SELECT winner, count(winner) as wins FROM " + TABLE_NAME + " GROUP by winner ORDER BY wins DESC", null);
         /* init result list */
         ArrayList<SpielerStatistik> list = new ArrayList<>();
         /* iterate over the results and fill the result array */

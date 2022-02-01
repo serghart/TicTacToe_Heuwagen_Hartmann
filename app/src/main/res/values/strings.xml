@@ -13,4 +13,8 @@
 
     <string name="nochmalSpielen">Nochmal spielen</string>
     <string name="homeButton">Home</string>
+
+    <string name="PositionLabel">Pos.</string>
+    <string name="WinnerNameLabel">Name</string>
+    <string name="GamesWonLabel">gewonnene Spiele</string>
 </resources>

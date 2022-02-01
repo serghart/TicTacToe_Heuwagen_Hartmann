@@ -8,17 +8,61 @@
     android:background="#feb236">
 
     <ScrollView
-        android:layout_width="330dp"
-        android:layout_height="658dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingTop="30dp">
 
-        <LinearLayout
+        <TableLayout
             android:id="@+id/winnerContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
+            android:orientation="vertical">
+            <TableRow
+                android:id="@+id/tableStartRor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/PositionLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/PositionLabel"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#D8D7D7"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/WinnerNameLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/WinnerNameLabel"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#D8D7D7"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/GamesWonLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/GamesWonLabel"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#D8D7D7"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </TableRow>
+        </TableLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
