@@ -37,10 +37,14 @@ public class spielBild extends AppCompatActivity {
         ticTacToeFeld.spielErstellen(nochmalSpielenButton, homeButton, spielerBild, spielerNamen);
     }
 
+    // Nochmal spielen Button Methode
+
     public void nochmalSpielenButtonClick(View view) {
         ticTacToeFeld.resetSpiel();
         ticTacToeFeld.invalidate();
     }
+
+    // Home Button Methode
 
     public void homeButtonClick(View view){
         Intent intent = new Intent(this, MainActivity.class);

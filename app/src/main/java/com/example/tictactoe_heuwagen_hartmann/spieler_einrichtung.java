@@ -12,6 +12,8 @@ public class spieler_einrichtung extends AppCompatActivity {
     private EditText spieler1;
     private EditText spieler2;
 
+    // Extrahieren der Views und Zuweisen zu einer Variablen
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +22,8 @@ public class spieler_einrichtung extends AppCompatActivity {
         spieler1 = findViewById(R.id.spieler1Name);
         spieler2 = findViewById(R.id.spieler2Name);
     }
+
+    // Methode Spielernamen speichern
 
     public void speichernButtonClick(View view){
         String spieler1Name = spieler1.getText().toString();
